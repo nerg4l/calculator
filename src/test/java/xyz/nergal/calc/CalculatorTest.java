@@ -85,9 +85,33 @@ public class CalculatorTest {
   }
 
   @Test
+  public void simpleCalculationWithoutSpace() {
+    String calculation = "5+14/2*10-20";
+    double expected = 5D+14D/2D*10D-20D;
+
+    Assert.assertEquals(expected, calculator.calc(calculation), 2);
+  }
+
+  @Test
   public void complexCalculation() {
     String calculation = "5 + 14 / 2 * (10 - 20) + 1";
     double expected = 5D + 14D / 2D * (10D - 20D) + 1D;
+
+    Assert.assertEquals(expected, calculator.calc(calculation), 2);
+  }
+
+  @Test
+  public void complexCalculationWithRandomSpaces() {
+    String calculation = "5+14 /2 * ( 10- 20)+ 1";
+    double expected = 5D+14D /2D * ( 10D- 20D)+ 1D;
+
+    Assert.assertEquals(expected, calculator.calc(calculation), 2);
+  }
+
+  @Test
+  public void complexCalculationWithNestedBrackets() {
+    String calculation = "5 + 14 / (2 * (10 - (20))) + 1";
+    double expected = 5D + 14D / (2D * (10D - (20D))) + 1D;
 
     Assert.assertEquals(expected, calculator.calc(calculation), 2);
   }
