@@ -9,7 +9,7 @@ public class CalculatorTest {
 
   @Before
   public void createCalculator() {
-    calculator = new Calculator();
+    calculator = new ShuntingYardCalculator();
   }
 
   @Test
