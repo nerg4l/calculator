@@ -4,13 +4,15 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CalculatorTest {
+public abstract class CalculatorTest {
   private Calculator calculator;
 
   @Before
   public void createCalculator() {
-    calculator = new Calculator();
+    calculator = getCalculator();
   }
+
+  protected abstract Calculator getCalculator();
 
   @Test
   public void simpleSummation() {
