@@ -13,3 +13,13 @@ The point of this repository is to provide a project for developers to test thei
 After you finished checkout `pointing` to see the pointing system.
 
 You can checkout `example` branch to see my implementation.
+
+### Point system
+
+* 1 point for modifying Calculator to be an Interface instead of a Class
+* 2 point for finding algorithms (Reverse Polish notation, Shunting-yard algorithm)
+* 1 point for separating code (Parser, Validator, ...)
+* 1 point for making code easily extendable (Orthogonality)
+* 1 point for not trusting user input
+* 1 point for smart naming
+* 5 point for seed
